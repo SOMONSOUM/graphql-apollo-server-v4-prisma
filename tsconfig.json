@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/src",
+    "target": "esnext",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "lib": [
+      "esnext",
+      "esnext.asynciterable"
+    ],
+    "removeComments": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "node"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": ["src/**/*", "scripts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "test"
+  ],
+  "plugins": [
+    {
+      "transform": "typescript-transform-paths",
+      "useRootDirs": true,
+      "afterDeclarations": true
+    }
+  ],
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  }
+}
